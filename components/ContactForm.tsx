@@ -16,26 +16,26 @@ export function ContactForm() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://formspree.io/f/xyzjpplk", {
-        method: "POST",
-        body: data,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+  const res = await fetch("https://formspree.io/f/xyzjpplk", {
+    method: "POST",
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  });
 
-      if (res.ok) {
-        toast.success("Message sent successfully!");
-        form.reset();
-      } else {
-        toast.error("Failed to send message. Please try again.");
-      }
-    } catch (err) {
-      toast.error("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  if (res.ok) {
+    toast.success("Message sent successfully!");
+    form.reset();
+  } else {
+    toast.error("Failed to send message. Please try again.");
+  }
+} catch {
+  toast.error("Something went wrong. Please try again.");
+} finally {
+  setLoading(false);
+}
+
 
   return (
     <motion.div
