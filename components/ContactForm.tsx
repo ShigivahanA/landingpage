@@ -35,7 +35,7 @@ export function ContactForm() {
 } finally {
   setLoading(false);
 }
-
+  };
 
   return (
     <motion.div
