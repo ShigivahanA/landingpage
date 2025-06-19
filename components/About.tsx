@@ -21,7 +21,7 @@ export function FadeInParagraph() {
   return (
     <motion.p
       ref={ref}
-      className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed sm:leading-loose mx-auto max-w-[90%] sm:max-w-3xl text-center px-4"
+      className="text-base sm:text-xl md:text-xl lg:text-2xl leading-relaxed sm:leading-loose mx-auto max-w-[90%] sm:max-w-3xl text-center px-4"
       initial="hidden"
       animate={controls}
       variants={{
