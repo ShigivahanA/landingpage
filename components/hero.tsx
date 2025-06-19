@@ -21,7 +21,7 @@ export function Hero() {
       }}
     >
       <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug sm:leading-tight mx-auto max-w-[90%] text-center"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug sm:leading-tight mx-auto max-w-[90%] text-center mb-10"
         variants={{
           hidden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
