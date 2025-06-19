@@ -28,12 +28,11 @@ const imageData = [
   { src: "https://plus.unsplash.com/premium_photo-1748193468691-494891c77dfd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3M3x8fGVufDB8fHx8fA%3D%3D", tag: "rooms" },
 ];
 
-
-
-const filters = ["all", "dining", "hall", "parking", "outdoor", "rooms"];
+const filters = ["all", "dining", "hall", "parking", "outdoor", "rooms"] as const;
+type FilterKey = typeof filters[number];
 
 export default function GalleryPage() {
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState<FilterKey>("all");
   const { language } = useLanguage();
 
   const filteredImages =
@@ -41,8 +40,8 @@ export default function GalleryPage() {
       ? imageData
       : imageData.filter((img) => img.tag === activeFilter);
 
-  const getFilterLabel = (filter: string) => {
-    const labels = {
+  const getFilterLabel = (filter: FilterKey) => {
+    const labels: Record<FilterKey, string> = {
       all: language === "ta" ? "அனைத்தும்" : "All",
       dining: language === "ta" ? "உணவரங்கம்" : "Dining",
       hall: language === "ta" ? "மண்டபம்" : "Hall",
@@ -58,7 +57,9 @@ export default function GalleryPage() {
       <Navbar />
       <div className="px-4 py-10 max-w-7xl mx-auto">
         <h1 className="text-4xl mb-8 text-center">
-          {language === "ta" ? "திருமண மண்டபத்துக்கான புகைப்பட தொகுப்பு" : "Venue Gallery"}
+          {language === "ta"
+            ? "திருமண மண்டபத்துக்கான புகைப்பட தொகுப்பு"
+            : "Venue Gallery"}
         </h1>
 
         {/* Filter Buttons */}
@@ -101,4 +102,3 @@ export default function GalleryPage() {
     </div>
   );
 }
-
