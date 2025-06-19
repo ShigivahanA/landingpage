@@ -15,7 +15,7 @@ export function Navbar() {
     <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
       <div className="w-full max-w-5xl flex justify-between items-center px-5 text-sm">
         <div className="flex gap-5 items-center font-semibold">
-          <Link href="/">{language === 'en' ? 'SITM' : 'ஸ்ரீ ஐயப்பன் திருமண மஹால்'}</Link>
+          <Link href="/">{language === 'en' ? 'SRI IYYAPPAN THIRUMANA MANDAPAM' : 'ஸ்ரீ ஐயப்பன் திருமண மஹால்'}</Link>
         </div>
         <Button variant="ghost" size="sm" onClick={toggleLanguage}>
           {language === 'en' ? 'தமிழ்' : 'English'}
