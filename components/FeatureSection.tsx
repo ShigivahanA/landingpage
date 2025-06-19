@@ -29,7 +29,7 @@ export function FeatureSection() {
 
   return (
     <div className="text-center max-w-4xl mx-auto py-20 px-4">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-12">
+      <h2 className="text-2xl sm:text-xl lg:text-4xl font-bold mb-12">
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
             key={language}
