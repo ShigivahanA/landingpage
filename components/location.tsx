@@ -25,7 +25,7 @@ export function Location() {
       className="w-full px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center justify-center bg-background"
     >
       <div className="w-full max-w-screen-xl text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-8">
+        <h2 className="text-3xl sm:text-2xl font-bold mb-8">
           <AnimatePresence mode="wait" initial={false}>
             <motion.span
               key={language}
