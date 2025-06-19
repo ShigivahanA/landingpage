@@ -26,13 +26,13 @@ export function Carousel() {
     },
     ta: {
       heading: "எங்கள் மண்டபத்தின் சிறப்பம்சங்கள்",
-      button: "மேலும் ஆய்வு செய்க",
+      button: "மேலும் காண்க",
     },
   };
 
   return (
     <div className="py-10 px-4 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6">{content[language].heading}</h2>
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 text-center">{content[language].heading}</h2>
       <Swiper
         modules={[Autoplay]}
         spaceBetween={20}
