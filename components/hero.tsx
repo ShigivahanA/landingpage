@@ -1,9 +1,12 @@
 "use client";
 
 import { FadeInParagraph } from "./About";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Hero() {
+  const { language } = useLanguage();
+
   return (
     <motion.div
       className="flex flex-col gap-16 items-center"
@@ -12,7 +15,7 @@ export function Hero() {
       variants={{
         visible: {
           transition: {
-            staggerChildren: 0.3, // delay between children
+            staggerChildren: 0.3,
           },
         },
       }}
@@ -24,7 +27,20 @@ export function Hero() {
           visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
         }}
       >
-        Sri Iyyappan Thirumana Mandapam
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.span
+            key={language}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4 }}
+            style={{ display: "inline-block" }}
+          >
+            {language === "ta"
+              ? "ஸ்ரீ ஐயப்பன் திருமண மண்டபம்"
+              : "Sri Iyyappan Thirumana Mandapam"}
+          </motion.span>
+        </AnimatePresence>
       </motion.h1>
 
       <motion.p
@@ -34,7 +50,20 @@ export function Hero() {
           visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
         }}
       >
-        A timeless space for your most cherished celebrations.
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.span
+            key={language}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.4 }}
+            style={{ display: "inline-block" }}
+          >
+            {language === "ta"
+              ? "உங்கள் மதிப்புமிக்க கொண்டாட்டங்களுக்கான காலத்தால் அமைந்த இடம்."
+              : "A timeless space for your most cherished celebrations."}
+          </motion.span>
+        </AnimatePresence>
       </motion.p>
 
       <motion.div
