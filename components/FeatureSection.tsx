@@ -8,7 +8,7 @@ import { useLanguage } from "@/context/LanguageContext"; // assuming this is you
 const features = {
   en: [
     "Spacious air-conditioned hall",
-    "Dining area with 150+ capacity",
+    "Dining area with 250+ capacity",
     "Modern kitchen facility",
     "Ample parking space",
     "Stage and decoration ready",
@@ -16,7 +16,7 @@ const features = {
   ],
   ta: [
     "பெரிய குளிர்பிக்கப்பட்ட மண்டபம்",
-    "150+ பேர்களுக்கு உணவுக் கூடம்",
+    "250+ பேர்களுக்கு உணவுக் கூடம்",
     "நவீன சமையலறை வசதி",
     "பரபரப்பில்லாத கார்ப்பாரிங் வசதி",
     "வெள்ளைப் படிகாரம் மற்றும் அலங்காரம் தயாராக உள்ளது",
