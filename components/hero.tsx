@@ -21,7 +21,7 @@ export function Hero() {
       }}
     >
       <motion.h1
-        className="text-4xl lg:text-5xl !leading-tight mx-auto max-w-xl text-center"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug sm:leading-tight mx-auto max-w-[90%] text-center"
         variants={{
           hidden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -44,7 +44,7 @@ export function Hero() {
       </motion.h1>
 
       <motion.p
-        className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center"
+        className="text-base sm:text-xl md:text-2xl lg:text-3xl leading-relaxed sm:leading-snug mx-auto max-w-[90%] text-center"
         variants={{
           hidden: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
