@@ -3,7 +3,6 @@
 import { Navbar } from "@/components/navbar";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { useLanguage } from "@/context/LanguageContext";
-import Image from "next/image";
 import { useState } from "react";
 
 const imageData = [
