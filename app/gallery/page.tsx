@@ -15,7 +15,7 @@ const imageData = [
   { src: "https://images.unsplash.com/photo-1728443783579-494fdbfd8512?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
   { src: "https://images.unsplash.com/photo-1728443814449-7a2ad4d86ec3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
   { src: "https://images.unsplash.com/photo-1749318398976-5a9b45307aae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
-  { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80", tag: "outdoor" },
+  { src: "/images/outdoor1.jpg", tag: "outdoor" },
   { src: "https://images.unsplash.com/photo-1749898853429-2d7bc67e6433?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D", tag: "outdoor" },
   { src: "https://images.unsplash.com/photo-1743930285895-ce090ae2a115?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNnx8fGVufDB8fHx8fA%3D%3D", tag: "outdoor" },
   { src: "https://images.unsplash.com/photo-1744019960830-eb79b2528f8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzOHx8fGVufDB8fHx8fA%3D%3D", tag: "rooms" },
