@@ -73,7 +73,7 @@ export default function FAQ() {
 
   return (
     <section className="max-w-3xl mx-auto px-4 py-12">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10">
+      <h2 className="text-2xl sm:text-xl lg:text-4xl font-bold text-center mb-10">
         {language === "ta" ? "அடிக்கடி கேட்கப்படும் கேள்விகள்" : "Frequently Asked Questions"}
       </h2>
       <div className="space-y-4">
