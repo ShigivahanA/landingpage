@@ -5,7 +5,6 @@ import { Hero } from "@/components/hero";
 import { Location } from "@/components/location";
 import { Navbar } from "@/components/navbar";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import Link from "next/link";
 
 export default function Home() {
   return (
