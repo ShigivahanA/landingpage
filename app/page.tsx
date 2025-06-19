@@ -4,6 +4,7 @@ import { FeatureSection } from "@/components/FeatureSection";
 import { Hero } from "@/components/hero";
 import { Location } from "@/components/location";
 import { Navbar } from "@/components/navbar";
+import FAQ from "@/components/faq";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function Home() {
@@ -28,6 +29,9 @@ export default function Home() {
         </div>
         <div className="px-4 sm:px-6 lg:px-8">
           <Location/>
+        </div>
+        <div className="px-4 sm:px-6 lg:px-8">
+          <FAQ/>
         </div>
       </div>
 
