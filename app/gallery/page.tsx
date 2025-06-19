@@ -1,4 +1,3 @@
-// app/gallery/page.tsx
 "use client";
 
 import { Navbar } from "@/components/navbar";
@@ -71,11 +70,14 @@ export default function GalleryPage() {
               key={i}
               className="overflow-hidden rounded-xl shadow-md break-inside-avoid"
             >
-              <img
+              <Image
                 src={img.src}
                 alt={img.tag}
+                width={600}
+                height={400}
                 className="w-full h-auto object-cover transition-transform hover:scale-105 duration-300"
               />
+
             </div>
           ))}
         </div>
