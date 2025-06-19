@@ -34,7 +34,7 @@ const faqs = {
   ],
   ta: [
     {
-      question: "வெளிநாட்டு உணவுகள் அனுமதிக்கப்படுமா?",
+      question: "வெளிப்புற உணவுகள் அனுமதிக்கப்படுமா?",
       answer:
         "இல்லை, தரமும் தூய்மையும் உறுதிசெய்ய, சபைஉணவகம் அல்லது கூட்டாளி உணவகங்கள் மட்டுமே அனுமதிக்கப்படுகின்றன.",
     },
@@ -73,7 +73,7 @@ export default function FAQ() {
 
   return (
     <section className="max-w-3xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-center mb-8">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10">
         {language === "ta" ? "அடிக்கடி கேட்கப்படும் கேள்விகள்" : "Frequently Asked Questions"}
       </h2>
       <div className="space-y-4">
@@ -83,7 +83,7 @@ export default function FAQ() {
               className="flex justify-between items-center w-full text-left"
               onClick={() => toggleFAQ(index)}
             >
-              <span className="text-lg font-medium">{faq.question}</span>
+              <span className="text-base sm:text-lg font-medium">{faq.question}</span>
               {openIndex === index ? (
                 <Minus className="w-5 h-5" />
               ) : (
@@ -101,7 +101,7 @@ export default function FAQ() {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="mt-3">{faq.answer}</p>
+                  <p className="mt-3 text-sm sm:text-base leading-relaxed">{faq.answer}</p>
                 </motion.div>
               )}
             </AnimatePresence>
