@@ -42,7 +42,7 @@ export default function Home() {
         <p className="text-muted-foreground">Mr. Iyyappan</p>
         <p className="text-muted-foreground">Sri Iyyappan Thirumana Mandapam</p>
         <p className="text-muted-foreground">Vannarpettai, Tirunelveli</p>
-        <p className="text-muted-foreground">Contact: +91 9994363390</p>
+        <p className="text-muted-foreground">Contact: +91 9600789789</p>
         <div className="mt-4">
           <ThemeSwitcher />
         </div>
