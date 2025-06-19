@@ -29,7 +29,7 @@ export function FeatureSection() {
 
   return (
     <div className="text-center max-w-4xl mx-auto py-20 px-4">
-      <h2 className="text-3xl font-bold mb-12">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-12">
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
             key={language}
@@ -86,7 +86,7 @@ function FadeInItem({
         visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay } },
         hidden: { opacity: 0, y: 30, transition: { duration: 0.3 } },
       }}
-      className="rounded-2xl border border-border bg-muted p-6 shadow-sm text-lg font-medium"
+      className="rounded-2xl border border-border bg-muted p-6 text-base sm:text-lg font-medium shadow-sm"
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
