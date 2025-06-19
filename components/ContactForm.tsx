@@ -4,9 +4,36 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { Loader2 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function ContactForm() {
+  const { language } = useLanguage();
   const [loading, setLoading] = useState(false);
+
+  const t = {
+    en: {
+      heading: "Contact Us",
+      name: "Your Name",
+      mobile: "Your Mobile Number",
+      occasion: "Occasion",
+      send: "Send Message",
+      sending: "Sending...",
+      success: "Message sent successfully!",
+      fail: "Failed to send message. Please try again.",
+      error: "Something went wrong. Please try again.",
+    },
+    ta: {
+      heading: "எங்களைத் தொடர்பு கொள்ளவும்",
+      name: "உங்கள் பெயர்",
+      mobile: "உங்கள் கைபேசி எண்",
+      occasion: "நிகழ்வின் விபரம்",
+      send: "செய்தியை அனுப்பவும்",
+      sending: "அனுப்புகிறது...",
+      success: "செய்தி வெற்றிகரமாக அனுப்பப்பட்டது!",
+      fail: "செய்தியை அனுப்ப முடியவில்லை. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
+      error: "ஏதோ தவறு நடந்தது. தயவுசெய்து மீண்டும் முயற்சிக்கவும்.",
+    },
+  }[language];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,25 +43,25 @@ export function ContactForm() {
     setLoading(true);
 
     try {
-  const res = await fetch("https://formspree.io/f/xyzjpplk", {
-    method: "POST",
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  });
+      const res = await fetch("https://formspree.io/f/xyzjpplk", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-  if (res.ok) {
-    toast.success("Message sent successfully!");
-    form.reset();
-  } else {
-    toast.error("Failed to send message. Please try again.");
-  }
-} catch {
-  toast.error("Something went wrong. Please try again.");
-} finally {
-  setLoading(false);
-}
+      if (res.ok) {
+        toast.success(t.success);
+        form.reset();
+      } else {
+        toast.error(t.fail);
+      }
+    } catch {
+      toast.error(t.error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -47,7 +74,7 @@ export function ContactForm() {
     >
       <div className="w-full max-w-screen-xl">
         <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center">
-          Contact Us
+          {t.heading}
         </h2>
 
         <form
@@ -57,20 +84,20 @@ export function ContactForm() {
           <input
             name="name"
             type="text"
-            placeholder="Your Name"
+            placeholder={t.name}
             required
             className="w-full p-3 rounded-md border border-border bg-background placeholder:text-muted-foreground transition focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <input
             name="mobile"
             type="tel"
-            placeholder="Your Mobile Number"
+            placeholder={t.mobile}
             required
             className="w-full p-3 rounded-md border border-border bg-background placeholder:text-muted-foreground transition focus:outline-none focus:ring-2 focus:ring-primary"
           />
           <textarea
             name="occasion"
-            placeholder="Occasion"
+            placeholder={t.occasion}
             required
             className="w-full p-3 rounded-md border border-border bg-background placeholder:text-muted-foreground h-32 transition focus:outline-none focus:ring-2 focus:ring-primary resize-none"
           />
@@ -80,7 +107,7 @@ export function ContactForm() {
             className="w-full border-2 py-3 rounded-3xl transition font-medium flex items-center justify-center gap-2"
           >
             {loading && <Loader2 className="animate-spin w-4 h-4" />}
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? t.sending : t.send}
           </button>
         </form>
       </div>
