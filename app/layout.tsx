@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import { LanguageProvider } from '@/context/LanguageContext';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -33,8 +34,9 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >
+        ><LanguageProvider>
           {children}
+        </LanguageProvider>
           <Toaster position="top-right" />
         </ThemeProvider>
       </body>
