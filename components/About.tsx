@@ -3,12 +3,12 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { useLanguage } from "@/context/LanguageContext"; // ✅ import
+import { useLanguage } from "@/context/LanguageContext"; 
 
 export function FadeInParagraph() {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: false });
-  const { language } = useLanguage(); // ✅ get current language
+  const { language } = useLanguage(); 
 
   useEffect(() => {
     if (inView) {
@@ -38,7 +38,7 @@ export function FadeInParagraph() {
         </>
       ) : (
         <>
-          <strong>இயப்பன் திருமண மஹால்</strong> இல் உங்களை வரவேற்கின்றோம், இது
+          <strong>ஐயப்பன் திருமண மஹால்</strong> இல் உங்களை வரவேற்கின்றோம், இது
           திருமணங்கள், வரவேற்புகள் மற்றும் விழாக்களுக்கு சரியான இடமாகும்.{" "}
           <strong>வண்ணார்பேட்டை, திருநெல்வேலி</strong> யில் அமைந்துள்ள எங்கள்
           மண்டபம், அழகு, விசாலம் மற்றும் மறக்கமுடியாத தருணங்களை வழங்குகிறது.
