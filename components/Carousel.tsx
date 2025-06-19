@@ -1,8 +1,10 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from 'next/link';
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import Image from 'next/image';
 
 const images = [
   "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
@@ -45,15 +47,23 @@ export function Carousel() {
 
         {images.map((img, idx) => (
           <SwiperSlide key={idx}>
-              <img
+              <Image
                 src={img}
                 alt={`Slide ${idx + 1}`}
+                width={800}
+                height={400}
                 className="w-full h-48 sm:h-64 object-cover rounded-2xl"
-                loading="lazy"
               />
             </SwiperSlide>
         ))}
       </Swiper>
+       <div className="text-center mt-8">
+        <Link href="/gallery">
+          <button className=" px-6 py-3 rounded-2xl border-2 transition">
+            Explore More
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
