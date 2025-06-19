@@ -45,8 +45,8 @@ export default function GalleryPage() {
       all: language === "ta" ? "அனைத்தும்" : "All",
       dining: language === "ta" ? "உணவரங்கம்" : "Dining",
       hall: language === "ta" ? "மண்டபம்" : "Hall",
-      parking: language === "ta" ? "பார்கிங்" : "Parking",
-      outdoor: language === "ta" ? "வெளி பகுதியில்" : "Outdoor",
+      parking: language === "ta" ? "வாகன நிறுத்தும் இடம்" : "Parking",
+      outdoor: language === "ta" ? "வெளி பகுதி" : "Outdoor",
       rooms: language === "ta" ? "அறைகள்" : "Rooms",
     };
     return labels[filter];
