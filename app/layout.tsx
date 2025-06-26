@@ -5,9 +5,9 @@ import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { LanguageProvider } from '@/context/LanguageContext';
 
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+// const defaultUrl = process.env.VERCEL_URL
+//   ? `https://${process.env.VERCEL_URL}`
+//   : "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: "Iyyappan Thirumana Mahal",
