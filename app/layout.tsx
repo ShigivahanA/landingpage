@@ -11,10 +11,14 @@ const defaultUrl = process.env.VERCEL_URL
   : "http://localhost:3000";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(defaultUrl),
-   title: "Iyyappan Thirumana Mahal",
+  title: "Iyyappan Thirumana Mahal",
   description: "Premium wedding hall with elegant amenities and perfect ambiance.",
+  metadataBase: new URL("https://sriiyyappanthirumanamandapam.vercel.app/"),
+  verification: {
+    google: "4nStU1bOOIPZmCd3WRMMeGpcfuFatBw3ByqO5c_TC5U", 
+  },
 };
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +33,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head><meta name="google-site-verification" content="4nStU1bOOIPZmCd3WRMMeGpcfuFatBw3ByqO5c_TC5U" /></Head>
       <body className={`${geistSans.className} antialiased`}>
         <ThemeProvider
           attribute="class"
