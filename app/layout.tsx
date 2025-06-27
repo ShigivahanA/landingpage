@@ -32,6 +32,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.png" />
+        <meta name="application-name" content="Iyyappan Thirumana Mandapam" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta property="og:site_name" content="Iyyappan Thirumana Mandapam" />
+        <meta property="og:title" content="Sri Iyyappan Thirumana Mandapam" />
+        <meta property="og:description" content="Elegant wedding hall in Vannarpettai, Tirunelveli. Perfect for weddings and receptions." />
+        <meta property="og:image" content="https://sriiyyappanthirumanamandapam.vercel.app/logo.png" />
+        <meta property="og:url" content="https://sriiyyappanthirumanamandapam.vercel.app" />
+      </head>
       <body className={`${geistSans.className} antialiased`}>
         <ThemeProvider
           attribute="class"
