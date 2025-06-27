@@ -14,10 +14,36 @@ export const metadata: Metadata = {
   title: "Iyyappan Thirumana Mahal",
   description: "Premium wedding hall with elegant amenities and perfect ambiance.",
   metadataBase: new URL("https://sriiyyappanthirumanamandapam.vercel.app/"),
-  verification: {
-    google: "4nStU1bOOIPZmCd3WRMMeGpcfuFatBw3ByqO5c_TC5U", 
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+  manifest: "/site.webmanifest",
+  verification: {
+    google: "4nStU1bOOIPZmCd3WRMMeGpcfuFatBw3ByqO5c_TC5U",
+  },
+  openGraph: {
+    title: "Sri Iyyappan Thirumana Mandapam",
+    description: "Elegant wedding hall in Vannarpettai, Tirunelveli. Perfect for weddings and receptions.",
+    url: "https://sriiyyappanthirumanamandapam.vercel.app",
+    siteName: "Iyyappan Thirumana Mandapam",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Sri Iyyappan Thirumana Mandapam Logo",
+      },
+    ],
+    type: "website",
+  },
+  themeColor: "#ffffff",
+  applicationName: "Iyyappan Thirumana Mandapam",
 };
+
 
 
 const geistSans = Geist({
@@ -33,19 +59,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">        
-        <meta name="application-name" content="Iyyappan Thirumana Mandapam" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta property="og:site_name" content="Iyyappan Thirumana Mandapam" />
-        <meta property="og:title" content="Sri Iyyappan Thirumana Mandapam" />
-        <meta property="og:description" content="Elegant wedding hall in Vannarpettai, Tirunelveli. Perfect for weddings and receptions." />
-        <meta property="og:image" content="https://sriiyyappanthirumanamandapam.vercel.app/logo.png" />
-        <meta property="og:url" content="https://sriiyyappanthirumanamandapam.vercel.app" />
-      </head>
       <body className={`${geistSans.className} antialiased`}>
         <ThemeProvider
           attribute="class"
