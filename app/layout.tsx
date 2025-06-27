@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { LanguageProvider } from '@/context/LanguageContext';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 // const defaultUrl = process.env.VERCEL_URL
 //   ? `https://${process.env.VERCEL_URL}`
 //   : "http://localhost:3000";
@@ -53,6 +54,7 @@ export default function RootLayout({
         </LanguageProvider>
           <Toaster position="top-right" />
           <Analytics/>
+          <SpeedInsights/>
         </ThemeProvider>
       </body>
     </html>
