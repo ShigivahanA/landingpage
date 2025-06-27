@@ -52,8 +52,7 @@ export default function RootLayout({
           {children}
         </LanguageProvider>
           <Toaster position="top-right" />
-{/*           <Analytics/>
-        </ThemeProvider> */}
+        </ThemeProvider>
       </body>
     </html>
   );
