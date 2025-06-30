@@ -55,7 +55,7 @@ const imageData = [
 ];
 
 
-const filters = ["all", "dining", "hall", "parking", "outdoor", "rooms","lift","Power Backup","Entrance","Balcony"] as const;
+const filters = ["all", "dining", "hall", "parking", "outdoor", "rooms","lift","powerbackup","entrance","balcony"] as const;
 type FilterKey = typeof filters[number];
 
 export default function GalleryPage() {
