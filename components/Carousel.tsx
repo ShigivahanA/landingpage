@@ -13,7 +13,7 @@ const images = [
   "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//dining%20(2).jpg",
   "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//entrance%20(2).jpg",
   "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//kitchen%20(1).jpg",
-  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//outdoor%20(4).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//entrance%20(4).jpg",
   "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//outdoor%20(3).jpg",
   "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//parking%20(2).jpg",
   "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//rooms%20(2).jpg",
