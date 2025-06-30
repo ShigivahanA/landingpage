@@ -122,12 +122,10 @@ export default function GalleryPage() {
               <Image
                 src={img.src}
                 alt={img.tag}
-                fill
-                sizes="(min-width: 768px) 33vw, 50vw, 100vw"
-                style={{ objectFit: "cover", transition: "transform 0.3s" }}
-                className="hover:scale-105"
-                priority={false}
-                quality={80}
+                width={800}  // target width for layout
+                height={400} // target height for layout
+                priority={false} // lazy loads by default
+                quality={80}  // controls jpeg/webp quality (optional)
               />
             </div>
           ))}
