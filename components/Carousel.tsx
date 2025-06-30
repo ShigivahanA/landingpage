@@ -10,9 +10,14 @@ import { useLanguage } from "@/context/LanguageContext";
 const images = [
   "/images/outdoor1.jpg",
   "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg",
-  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg",
-  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg",
-  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//dining%20(2).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//entrance%20(2).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//entrance%20(2).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//kitchen%20(1).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//outdoor%20(4).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//outdoor%20(9).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//parking%20(2).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//rooms%20(2).jpg",
 ];
 
 export function Carousel() {
