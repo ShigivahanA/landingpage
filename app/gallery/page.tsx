@@ -125,7 +125,7 @@ export default function GalleryPage() {
                 width={800}  // target width for layout
                 height={400} // target height for layout
                 priority={false} // lazy loads by default
-                quality={80}  // controls jpeg/webp quality (optional)
+                quality={75}  // controls jpeg/webp quality (optional)
               />
             </div>
           ))}
