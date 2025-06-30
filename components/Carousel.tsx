@@ -9,11 +9,10 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const images = [
   "/images/outdoor1.jpg",
-  "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80",
-  "https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=800&q=80",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg",
+  "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg",
 ];
 
 export function Carousel() {
