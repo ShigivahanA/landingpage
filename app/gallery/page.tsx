@@ -124,7 +124,6 @@ export default function GalleryPage() {
                 alt={img.tag}
                 width={800}  // target width for layout
                 height={400} // target height for layout
-                priority={false} // lazy loads by default
                 quality={75}  // controls jpeg/webp quality (optional)
               />
             </div>
