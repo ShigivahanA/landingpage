@@ -6,7 +6,6 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useState } from "react";
 
 const imageData = [
-  const imageData = [
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(1).jpg", tag: "balcony" },
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg", tag: "balcony" },
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(3).jpg", tag: "balcony" },
@@ -55,7 +54,6 @@ const imageData = [
   { src: "/images/outdoor1.jpg", tag: "outdoor" }
 ];
 
-];
 
 const filters = ["all", "dining", "hall", "parking", "outdoor", "rooms","lift","Power Backup","Entrance","Balcony"] as const;
 type FilterKey = typeof filters[number];
