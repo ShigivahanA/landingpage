@@ -4,20 +4,8 @@ import { Navbar } from "@/components/navbar";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { useLanguage } from "@/context/LanguageContext";
 import { useState } from "react";
-// const imageData = [
-//   { src: "https://images.unsplash.com/photo-1743630738181-b0e26c76c74c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8", tag: "dining" },
-//   { src: "https://images.unsplash.com/photo-1749226703567-96d55b5c5eca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8", tag: "dining" },
-//   { src: "https://images.unsplash.com/photo-1749303025584-0b4e15e4146b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8", tag: "dining" },
-//   { src: "https://images.unsplash.com/photo-1750126833705-ba98013f16f3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D", tag: "hall" },
-//   { src: "https://images.unsplash.com/photo-1746105839114-fbc9c81fcb17?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D", tag: "hall" },
-//   { src: "https://images.unsplash.com/photo-1748257615880-6243d0d7422f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D", tag: "hall" },
-//   { src: "https://images.unsplash.com/photo-1728443783579-494fdbfd8512?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
-//   { src: "https://images.unsplash.com/photo-1728443814449-7a2ad4d86ec3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
-//   { src: "https://images.unsplash.com/photo-1749318398976-5a9b45307aae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
-//   { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80", tag: "outdoor" },
-//   { src: "https://images.unsplash.com/photo-1749898853429-2d7bc67e6433?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D", tag: "outdoor" },
-//   { src: "/images/outdoor1.jpg", tag: "outdoor" },
-//   ];
+import Image from "next/image";
+
 const imageData = [
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(1).jpg", tag: "balcony" },
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//balcony%20(2).jpg", tag: "balcony" },
@@ -131,10 +119,15 @@ export default function GalleryPage() {
               key={i}
               className="overflow-hidden rounded-xl shadow-md break-inside-avoid"
             >
-              <img
+              <Image
                 src={img.src}
                 alt={img.tag}
-                className="w-full h-auto object-cover transition-transform hover:scale-105 duration-300"
+                fill
+                sizes="(min-width: 768px) 33vw, 50vw, 100vw"
+                style={{ objectFit: "cover", transition: "transform 0.3s" }}
+                className="hover:scale-105"
+                priority={false}
+                quality={80}
               />
             </div>
           ))}
