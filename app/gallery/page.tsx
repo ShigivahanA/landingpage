@@ -6,29 +6,58 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useState } from "react";
 
 const imageData = [
-  { src: "https://images.unsplash.com/photo-1743630738181-b0e26c76c74c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8", tag: "dining" },
-  { src: "https://images.unsplash.com/photo-1749226703567-96d55b5c5eca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8", tag: "dining" },
-  { src: "https://images.unsplash.com/photo-1749303025584-0b4e15e4146b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8", tag: "dining" },
-  { src: "https://images.unsplash.com/photo-1750126833705-ba98013f16f3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D", tag: "hall" },
-  { src: "https://images.unsplash.com/photo-1746105839114-fbc9c81fcb17?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D", tag: "hall" },
-  { src: "https://images.unsplash.com/photo-1748257615880-6243d0d7422f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D", tag: "hall" },
-  { src: "https://images.unsplash.com/photo-1728443783579-494fdbfd8512?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
-  { src: "https://images.unsplash.com/photo-1728443814449-7a2ad4d86ec3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
-  { src: "https://images.unsplash.com/photo-1749318398976-5a9b45307aae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
-  { src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80", tag: "outdoor" },
-  { src: "https://images.unsplash.com/photo-1749898853429-2d7bc67e6433?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D", tag: "outdoor" },
-  { src: "/images/outdoor1.jpg", tag: "outdoor" },
-  { src: "https://images.unsplash.com/photo-1744019960830-eb79b2528f8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzOHx8fGVufDB8fHx8fA%3D%3D", tag: "rooms" },
-  { src: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80", tag: "rooms" },
-  { src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80", tag: "rooms" },
-  { src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80", tag: "dining" },
-  { src: "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=800&q=80", tag: "hall" },
-  { src: "https://images.unsplash.com/photo-1744265385437-8b591b626a8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0Mnx8fGVufDB8fHx8fA%3D%3D", tag: "parking" },
-  { src: "https://images.unsplash.com/photo-1750087328910-16dd862838eb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MXx8fGVufDB8fHx8fA%3D%3D", tag: "outdoor" },
-  { src: "https://plus.unsplash.com/premium_photo-1748193468691-494891c77dfd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3M3x8fGVufDB8fHx8fA%3D%3D", tag: "rooms" },
+  const imageData = [
+  { src: "/images/balcony (1).jpg", tag: "balcony" },
+  { src: "/images/balcony (2).jpg", tag: "balcony" },
+  { src: "/images/balcony (3).jpg", tag: "balcony" },
+  { src: "/images/dining (1).jpg", tag: "dining" },
+  { src: "/images/dining (2).jpg", tag: "dining" },
+  { src: "/images/dining (3).jpg", tag: "dining" },
+  { src: "/images/dining (4).jpg", tag: "dining" },
+  { src: "/images/dining (5).jpg", tag: "dining" },
+  { src: "/images/entrance (1).jpg", tag: "entrance" },
+  { src: "/images/entrance (2).jpg", tag: "entrance" },
+  { src: "/images/entrance (3).jpg", tag: "entrance" },
+  { src: "/images/entrance (4).jpg", tag: "entrance" },
+  { src: "/images/entrance (5).jpg", tag: "entrance" },
+  { src: "/images/entrance (6).jpg", tag: "entrance" },
+  { src: "/images/entrance (7).jpg", tag: "entrance" },
+  { src: "/images/entrance (8).jpg", tag: "entrance" },
+  { src: "/images/hall (1).jpg", tag: "hall" },
+  { src: "/images/hall (2).jpg", tag: "hall" },
+  { src: "/images/hall (3).jpg", tag: "hall" },
+  { src: "/images/hall (4).jpg", tag: "hall" },
+  { src: "/images/hall (5).jpg", tag: "hall" },
+  { src: "/images/hall (6).jpg", tag: "hall" },
+  { src: "/images/hall (7).jpg", tag: "hall" },
+  { src: "/images/hall (8).jpg", tag: "hall" },
+  { src: "/images/hall (9).jpg", tag: "hall" },
+  { src: "/images/kitchen (1).jpg", tag: "kitchen" },
+  { src: "/images/kitchen (2).jpg", tag: "kitchen" },
+  { src: "/images/lift (1).jpg", tag: "lift" },
+  { src: "/images/lift (2).jpg", tag: "lift" },
+  { src: "/images/outdoor (1).jpg", tag: "outdoor" },
+  { src: "/images/outdoor (2).jpg", tag: "outdoor" },
+  { src: "/images/outdoor (3).jpg", tag: "outdoor" },
+  { src: "/images/outdoor (4).jpg", tag: "outdoor" },
+  { src: "/images/outdoor (5).jpg", tag: "outdoor" },
+  { src: "/images/outdoor (6).jpg", tag: "outdoor" },
+  { src: "/images/outdoor (7).jpg", tag: "outdoor" },
+  { src: "/images/outdoor (8).jpg", tag: "outdoor" },
+  { src: "/images/outdoor (9).jpg", tag: "outdoor" },
+  { src: "/images/parking (1).jpg", tag: "parking" },
+  { src: "/images/parking (2).jpg", tag: "parking" },
+  { src: "/images/parking (3).jpg", tag: "parking" },
+  { src: "/images/power (1).jpg", tag: "power" },
+  { src: "/images/power (2).jpg", tag: "power" },
+  { src: "/images/rooms (1).jpg", tag: "rooms" },
+  { src: "/images/rooms (2).jpg", tag: "rooms" },
+  { src: "/images/outdoor1.jpg", tag: "outdoor" }
 ];
 
-const filters = ["all", "dining", "hall", "parking", "outdoor", "rooms"] as const;
+];
+
+const filters = ["all", "dining", "hall", "parking", "outdoor", "rooms","lift","Power Backup","Entrance","Balcony"] as const;
 type FilterKey = typeof filters[number];
 
 export default function GalleryPage() {
@@ -41,16 +70,21 @@ export default function GalleryPage() {
       : imageData.filter((img) => img.tag === activeFilter);
 
   const getFilterLabel = (filter: FilterKey) => {
-    const labels: Record<FilterKey, string> = {
-      all: language === "ta" ? "அனைத்தும்" : "All",
-      dining: language === "ta" ? "உணவரங்கம்" : "Dining",
-      hall: language === "ta" ? "மண்டபம்" : "Hall",
-      parking: language === "ta" ? "வாகன நிறுத்தும் இடம்" : "Parking",
-      outdoor: language === "ta" ? "வெளி பகுதி" : "Outdoor",
-      rooms: language === "ta" ? "அறைகள்" : "Rooms",
-    };
-    return labels[filter];
+  const labels: Record<FilterKey, string> = {
+    all: language === "ta" ? "அனைத்தும்" : "All",
+    dining: language === "ta" ? "சாப்பாட்டு இடம்" : "Dining",
+    hall: language === "ta" ? "மண்டபம்" : "Hall",
+    parking: language === "ta" ? "பார்க்கிங்" : "Parking",
+    outdoor: language === "ta" ? "வெளிப் பகுதி" : "Outdoor",
+    rooms: language === "ta" ? "ரூம்கள்" : "Rooms",
+    lift: language === "ta" ? "லிஃப்ட்" : "Lift",
+    powerbackup: language === "ta" ? "பவர் பேக்கப்" : "Power Backup",
+    entrance: language === "ta" ? "நுழைவு" : "Entrance",
+    balcony: language === "ta" ? "பால்கனி" : "Balcony",
   };
+  return labels[filter];
+};
+
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
