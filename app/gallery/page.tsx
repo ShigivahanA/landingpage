@@ -47,8 +47,8 @@ const imageData = [
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//parking%20(1).jpg", tag: "parking" },
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//parking%20(2).jpg", tag: "parking" },
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//parking%20(3).jpg", tag: "parking" },
-  { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//power%20(1).jpg", tag: "power" },
-  { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//power%20(2).jpg", tag: "power" },
+  { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//power%20(1).jpg", tag: "powerbackup" },
+  { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//power%20(2).jpg", tag: "powerbackup" },
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//rooms%20(1).jpg", tag: "rooms" },
   { src: "https://ljyojfjihkfxdjfmlpxu.supabase.co/storage/v1/object/public/images//rooms%20(2).jpg", tag: "rooms" },
   { src: "/images/outdoor1.jpg", tag: "outdoor" }
